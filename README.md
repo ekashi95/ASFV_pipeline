@@ -1,3 +1,27 @@
+<details>
+<summary>[🇷🇺] ASFV_pipeline (версия с низким потреблением памяти): инструкция на русском языке</summary>
+
+## ASFV_pipeline (версия с низким потреблением памяти)
+В пайплайне из оригинального репозитория используется утилита bwa-mem2, очень требовательная к объёму оперативной памяти. Здесь предлагается не самое изящное, но рабочее решение по замене в наиболее ресурсоёмких операциях bwa-mem2 на bwa. 
+
+Необходимые файлы с инструкцией будут загружены в ближайшее время. 
+
+Ниже — README из оригинального репозитория. 
+</details>
+
+<details>
+<summary>[🇬🇧] ASFV_pipeline (low-memory fork): English Instructions</summary>
+
+## ASFV_pipeline (low-memory fork)
+The pipeline from the original repository uses the bwa-mem2 utility, which is very memory-intensive. This isn't the most elegant, but it works by replacing bwa-mem2 with bwa for the most resource-intensive operations.
+
+The necessary files with instructions will be uploaded shortly.
+
+Below is the README from the original repository.
+</details>
+
+****
+
 # ASFV Pipeline
 ## Dependencies
 Pipeline has been created using a docker image. Singularity may also be used. Please install one of these programs.

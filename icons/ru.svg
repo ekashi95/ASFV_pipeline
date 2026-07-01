@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 25 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-753.213,-686.629)">
+        <g transform="matrix(1.12442,0,0,1,-96.7995,0.34284)">
+            <path d="M778,688.548C778,687.3 777.098,686.286 775.988,686.286L757.968,686.286C756.858,686.286 755.956,687.3 755.956,688.548L755.956,702.879C755.956,704.128 756.858,705.142 757.968,705.142L775.988,705.142C777.098,705.142 778,704.128 778,702.879L778,688.548Z" style="fill:rgb(16,128,193);"/>
+        </g>
+        <g transform="matrix(12.5,0,0,12.5,774.24,700.805)">
+        </g>
+        <text x="756.973px" y="700.805px" style="font-family:'OpenSans-SemiBold', 'Open Sans';font-weight:600;font-size:12.5px;fill:white;">RU</text>
+    </g>
+</svg>

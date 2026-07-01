@@ -4,7 +4,40 @@
 ## ASFV_pipeline (версия с низким потреблением памяти)
 В пайплайне из оригинального репозитория используется утилита bwa-mem2, очень требовательная к объёму оперативной памяти. Здесь предлагается не самое изящное, но рабочее решение по замене в наиболее ресурсоёмких операциях bwa-mem2 на bwa. 
 
-Необходимые файлы с инструкцией будут загружены в ближайшее время. 
+Если пайплайн из оригинального репозитория на вашем компьютере падает с ошибкой из-за нехватки оперативной памяти на этапе индексирования генома Sus scrofa — возможно, этот форк вам поможет. 
+
+### Инструкция (Ubuntu)
+
+Загрузите папку ``pipeline`` из репозитория. Заполните поля в CSV-файле ``MetadataNew.csv``. 
+
+Установите Docker Desktop по инструкции с официального сайта (https://docs.docker.com/desktop/setup/install/linux/ubuntu/) и запустите его. 
+
+Загрузите контейнер: 
+```
+docker pull garadock/asfv_denovo_assembly_pipeline:v06
+```
+
+Запустите контейнер:
+```
+docker run -it -v "$HOME":"$HOME" -w "$PWD" garadock/asfv_denovo_assembly_pipeline:v06 /bin/bash
+```
+
+Зайдите в папку с файлами пайплана и запустите скрипт ``1.sh``:
+```
+chmod 777 1.sh
+./1.sh
+```
+
+Данный скрипт загрузит и установит утилиту ``bwa``, а также подготовит скрипт-перехватчик команд ``bwa-mem2``, который будет запускать ``bwa`` вместо ``bwa-mem2``. (Утилита ``bwa`` работает медленнее, чем ``bwa-mem2``, но при этом гораздо менее требовательна к объёму оперативной памяти.)
+
+Если загрузка ``bwa`` падает с ошибкой из-за невозможности подключиться к определённым серверам, попробуйте раскомментировать первые две строки в файле ``1.sh`` и заново запустить этот скрипт: тогда загрузка будет осуществляться с зеркала "Яндекса". 
+
+После этого запустите пайплайн:
+```
+python3 ASFV_Pipeline.py
+```
+
+Необходимые файлы для запуска будут загружены в ближайшее время. 
 
 Ниже — README из оригинального репозитория. 
 </details>
@@ -15,7 +48,7 @@
 ## ASFV_pipeline (low-memory fork)
 The pipeline from the original repository uses the bwa-mem2 utility, which is very memory-intensive. This isn't the most elegant, but it works by replacing bwa-mem2 with bwa for the most resource-intensive operations.
 
-The necessary files with instructions will be uploaded shortly.
+The necessary files for running pipeline will be uploaded shortly.
 
 Below is the README from the original repository.
 </details>
